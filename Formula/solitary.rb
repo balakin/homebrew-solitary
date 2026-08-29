@@ -5,23 +5,23 @@
 class Solitary < Formula
   desc "Run coding agents on a VM, not on your machine"
   homepage "https://solitary.balakin.io"
-  version "0.8.0"
+  version "0.9.0"
   license "Apache-2.0"
 
   depends_on "lima"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/balakin/solitary/releases/download/v0.8.0/solitary_darwin_amd64.tar.gz"
-      sha256 "63cf6cf4905d0800e63ca3948e1cc99eab83755cdc5b4c252e9ee55dcb8819a3"
+      url "https://github.com/balakin/solitary/releases/download/v0.9.0/solitary_darwin_amd64.tar.gz"
+      sha256 "3e0c4354406e4f0afe30fb25c756cb6e6d41153385f0c568b8c5de3c684cbd47"
 
       define_method(:install) do
         bin.install "solitary"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/balakin/solitary/releases/download/v0.8.0/solitary_darwin_arm64.tar.gz"
-      sha256 "08ae5d774f2884ce0d05ccf6a046d2c683a59a5874e53de8d55d878c16053bd9"
+      url "https://github.com/balakin/solitary/releases/download/v0.9.0/solitary_darwin_arm64.tar.gz"
+      sha256 "d6b8cb15696181a85044f80cdcc08d711df912222afdbf46010486ddeebf821b"
 
       define_method(:install) do
         bin.install "solitary"
@@ -31,15 +31,15 @@ class Solitary < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/balakin/solitary/releases/download/v0.8.0/solitary_linux_amd64.tar.gz"
-      sha256 "f5ea6c669ec92b09ea6d944b9bf09f6acdfdb323f100dc39f18811aeadb193b9"
+      url "https://github.com/balakin/solitary/releases/download/v0.9.0/solitary_linux_amd64.tar.gz"
+      sha256 "19bff241bf8fc9c52f835fc7ce1e237bc156fe67bd5de853c441a144f8620af2"
       define_method(:install) do
         bin.install "solitary"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/balakin/solitary/releases/download/v0.8.0/solitary_linux_arm64.tar.gz"
-      sha256 "10006e12be04e186c1f37c4a582983ab2824369f4143c13a2d3050f5b8d8f5d9"
+      url "https://github.com/balakin/solitary/releases/download/v0.9.0/solitary_linux_arm64.tar.gz"
+      sha256 "a83257f4c13d3f2b526b6c513176721342fae1abfba7e791b80d26d1fe095ea3"
       define_method(:install) do
         bin.install "solitary"
       end
